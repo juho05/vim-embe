@@ -10,6 +10,8 @@ Syntax highlighting and indentation for [embe](https://github.com/Bananenpro/emb
 Plug 'Bananenpro/vim-embe'
 ```
 
+Install and enable [embe-ls](https://github.com/Bananenpro/embe-ls) for other language features.
+
 ## License
 
 MIT License
