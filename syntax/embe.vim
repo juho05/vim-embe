@@ -35,19 +35,23 @@ syntax match embeOperator "\v\="
 syntax match embeOperator "\v\<"
 syntax match embeOperator "\v\>"
 
+syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
+
 syntax match embeNumber "\d\+"
 syntax match embeNumber "-\d\+"
 syntax match embeNumber "-\?\d\+\.\d*"
 
-syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
+syntax match embeNotNumber "[a-zA-Z][0-9]\+"
+syntax match embeNotNumber "\.[0-9]\+"
+syntax match embeNotNumber "[0-9]\+\."
 
 syntax match embeFunctionCall /\w\+\ze\%(\[\%(\%(\[]\)\?\w\+\(,\s*\)\?\)\+\]\)\?(/
 syntax match embeEvent "@\w\+" skipwhite skipnl
 
+highlight default link embeNumber Number
 highlight default link embeTodo Todo
 highlight default link embeComment Comment
 highlight default link embeBoolean Boolean
-highlight default link embeNumber Number
 highlight default link embeString String
 highlight default link embeOperator Operator
 highlight default link embeKeyword Keyword
