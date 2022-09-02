@@ -37,15 +37,9 @@ syntax match embeOperator "\v\>"
 
 syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
 
-syntax match embeNumber "\d\+"
-syntax match embeNumber "-\d\+"
-syntax match embeNumber "-\?\d\+\.\d*"
+syntax match embeNumber "\v[^a-zA-Z]\zs-?\d+(\.\d+)?\ze($|[^a-zA-Z])"
 
-syntax match embeNotNumber "[a-zA-Z][0-9]\+"
-syntax match embeNotNumber "\.[0-9]\+"
-syntax match embeNotNumber "[0-9]\+\."
-
-syntax match embeFunctionCall /\w\+\ze\%(\[\%(\%(\[]\)\?\w\+\(,\s*\)\?\)\+\]\)\?(/
+syntax match embeFunctionCall /\w\+\ze(/
 syntax match embeEvent "@\w\+" skipwhite skipnl
 
 highlight default link embeNumber Number
