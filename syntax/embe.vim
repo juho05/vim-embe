@@ -36,10 +36,11 @@ syntax match embeOperator "\v\&\&"
 syntax match embeOperator "\v\="
 syntax match embeOperator "\v\<"
 syntax match embeOperator "\v\>"
+syntax match embeOperator "\v!"
 
 syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
 
-syntax match embeNumber "\v[^a-zA-Z]\zs-?\d+(\.\d+)?\ze($|[^a-zA-Z])"
+syntax match embeNumber "\v-?\d+(\.\d+)?\ze($|[^a-zA-Z\.])"
 
 syntax match embeFunctionCall /\w\+\ze(/
 syntax match embeEvent "@\w\+" skipwhite skipnl
