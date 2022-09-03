@@ -19,6 +19,7 @@ syntax keyword embeKeyword
 	\ for
 	\ var
 	\ const
+	\ func
 
 syntax keyword embeType
 	\ number
