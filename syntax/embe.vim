@@ -18,6 +18,7 @@ syntax keyword embeKeyword
 	\ while
 	\ for
 	\ var
+	\ const
 
 syntax keyword embeType
 	\ number
