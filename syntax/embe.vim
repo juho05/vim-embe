@@ -40,7 +40,7 @@ syntax match embeOperator "\v!"
 
 syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
 
-syntax match embeNumber "\v-?\d+(\.\d+)?\ze($|[^a-zA-Z\.])"
+syntax match embeNumber "\v<-?\d+(\.\d+)?>"
 
 syntax match embeFunctionCall /\w\+\ze(/
 syntax match embeEvent "@\w\+" skipwhite skipnl
