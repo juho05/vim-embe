@@ -40,6 +40,9 @@ syntax match embeOperator "\v!"
 
 syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
 
+syntax match embeNumber "\v<-?0b[0-1]+>"
+syntax match embeNumber "\v<-?0o[0-7]+>"
+syntax match embeNumber "\v<-?0x[0-9a-fA-F]+>"
 syntax match embeNumber "\v<-?\d+(\.\d+)?>"
 
 syntax match embeFunctionCall /\w\+\ze(/
