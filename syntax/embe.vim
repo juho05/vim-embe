@@ -25,6 +25,7 @@ syntax keyword embeType
 	\ number
 	\ boolean
 	\ string
+	\ image
 
 syntax match embeOperator "\v\+"
 syntax match embeOperator "\v-"
