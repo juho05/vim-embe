@@ -20,6 +20,7 @@ syntax keyword embeKeyword
 	\ var
 	\ const
 	\ func
+	\ event
 
 syntax keyword embeType
 	\ number
