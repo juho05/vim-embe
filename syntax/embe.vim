@@ -47,8 +47,10 @@ syntax match embeNumber "\v<-?0o[0-7]+>"
 syntax match embeNumber "\v<-?0x[0-9a-fA-F]+>"
 syntax match embeNumber "\v<-?\d+(\.\d+)?>"
 
-syntax match embeFunctionCall /\w\+\ze(/
-syntax match embeEvent "@\w\+" skipwhite skipnl
+syntax match embeDefName "\w\+" contained skipwhite
+syntax match embePreProc "#\w\+" nextgroup=embeDefName skipwhite
+syntax match embeFunctionCall "\w\+\ze("
+syntax match embeEvent "@\w\+"
 
 highlight default link embeNumber Number
 highlight default link embeTodo Todo
@@ -56,9 +58,11 @@ highlight default link embeComment Comment
 highlight default link embeBoolean Boolean
 highlight default link embeString String
 highlight default link embeOperator Operator
-highlight default link embeKeyword Keyword
+highlight default link embeKeyword Statement
 highlight default link embeType Type
-highlight default link embeEvent Keyword
+highlight default link embeEvent Statement
 highlight default link embeFunctionCall Function
+highlight default link embePreProc PreProc
+highlight default link embeDefName Constant
 
 let b:current_syntax = "embe"
