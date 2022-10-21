@@ -40,7 +40,7 @@ syntax match embeOperator "\v\<"
 syntax match embeOperator "\v\>"
 syntax match embeOperator "\v!"
 
-syntax region embeString start=/"/ skip=/\\"/ end=/"/ oneline
+syntax region embeString start=/"/ end=/"/ oneline
 
 syntax match embeNumber "\v<-?0b[0-1]+>"
 syntax match embeNumber "\v<-?0o[0-7]+>"
