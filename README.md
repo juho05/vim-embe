@@ -2,8 +2,6 @@
 
 Syntax highlighting and indentation for [embe](https://github.com/Bananenpro/embe).
 
-*Looking for more advanced language support? Check out [embe-ls](https://github.com/Bananenpro/embe-ls) for LSP features.*
-
 ## Installation
 
 ### vim-plug
