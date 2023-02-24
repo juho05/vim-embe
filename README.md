@@ -1,16 +1,16 @@
 # vim-embe
 
-Syntax highlighting and indentation for [embe](https://github.com/Bananenpro/embe).
+Syntax highlighting and indentation for [embe](https://github.com/juho05/embe).
 
 ## Installation
 
 ### vim-plug
 
 ```vim
-Plug 'Bananenpro/vim-embe'
+Plug 'juho05/vim-embe'
 ```
 
-Install and enable [embe-ls](https://github.com/Bananenpro/embe/blob/main/cmd/embe-ls/README.md) for more language features.
+Install and enable [embe-ls](https://github.com/juho05/embe/blob/main/cmd/embe-ls/README.md) for more language features.
 
 ## License
 
